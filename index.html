@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday Joisha! 🎮</title>
+    <!-- Google Fonts for Gaming and Modern aesthetics -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Outfit:wght@300;400;600;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- ENVELOPE OVERLAY -->
+    <div id="envelope-overlay" class="envelope-overlay">
+        <div class="envelope-wrapper">
+            <div class="envelope" id="envelope">
+                <div class="envelope-flap"></div>
+                <div class="envelope-pocket"></div>
+                <div class="letter-card">
+                    <h3 class="letter-title">JOISHA'S COMBAT BRIEFING</h3>
+                    <div class="letter-badge">TOP SECRET 🔒</div>
+                    <p class="letter-text">Click the seal to open...</p>
+                </div>
+                <div class="envelope-seal" id="envelope-seal">
+                    <span>💌</span>
+                </div>
+            </div>
+            <p class="envelope-instruction">A special drop from Chinny &amp; Nami Saan</p>
+        </div>
+    </div>
+
+    <!-- Background Canvas for Gaming grid & floating neon elements -->
+    <canvas id="bg-canvas"></canvas>
+
+    <!-- Custom sound synthesizer control -->
+    <button id="sound-toggle" class="sound-toggle" aria-label="Toggle Sound Effects">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round" class="sound-on">
+            <path d="M11 5L6 9H2v6h4l5 4V5z"></path>
+            <path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"></path>
+        </svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round" class="sound-off hidden">
+            <path d="M11 5L6 9H2v6h4l5 4V5z"></path>
+            <line x1="23" y1="9" x2="17" y2="15"></line>
+            <line x1="17" y1="9" x2="23" y2="15"></line>
+        </svg>
+        <span>Audio: Off</span>
+    </button>
+
+    <!-- Progress tracker dots -->
+    <nav class="dot-nav">
+        <a href="#hero" class="dot-link active" data-section="hero" aria-label="Hero Screen"></a>
+        <a href="#drop-point" class="dot-link" data-section="drop-point" aria-label="Drop Point"></a>
+        <a href="#chaos-moments" class="dot-link" data-section="chaos-moments" aria-label="Chaos Moments"></a>
+        <a href="#clutch-queen" class="dot-link" data-section="clutch-queen" aria-label="Clutch Queen"></a>
+        <a href="#real-talk" class="dot-link" data-section="real-talk" aria-label="Real Talk"></a>
+        <a href="#finale" class="dot-link" data-section="finale" aria-label="Finale"></a>
+    </nav>
+
+    <!-- Main Content Container -->
+    <main class="snap-container">
+
+        <!-- SECTION 1: HERO -->
+        <section id="hero" class="snap-section">
+            <div class="hero-content">
+                <div class="glitch-wrapper">
+                    <h1 class="glitch-text" data-text="HAPPY BIRTHDAY JOISHA">HAPPY BIRTHDAY JOISHA 🎉</h1>
+                </div>
+                <p class="hero-subtitle">From random teammates → best friends 💙</p>
+                <div class="hero-co-sign">
+                    <span>Sent with love by</span>
+                    <div class="signees">
+                        <span class="badge chinny">Chinny</span>
+                        <span class="badge &">&amp;</span>
+                        <span class="badge nami">Nami Saan</span>
+                    </div>
+                </div>
+                <div class="scroll-indicator">
+                    <span class="scroll-text">Scroll to Drop</span>
+                    <svg class="arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="12" y1="5" x2="12" y2="19"></line>
+                        <polyline points="19 12 12 19 5 12"></polyline>
+                    </svg>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 2: DROP POINT -->
+        <section id="drop-point" class="snap-section">
+            <div class="section-card glass-panel fade-in">
+                <div class="card-header">
+                    <span class="section-tag">01 / MAP INITIALIZED</span>
+                    <h2 class="section-title"><span class="emoji">🪂</span> Drop Point: Where It Started</h2>
+                </div>
+                <div class="card-body map-layout">
+                    <div class="map-visual">
+                        <div class="radar-ping"></div>
+                        <div class="airdrop-box">
+                            <div class="crate-top"></div>
+                            <div class="crate-body"></div>
+                            <div class="crate-flare"></div>
+                        </div>
+                    </div>
+                    <div class="map-text">
+                        <h3>Matchmaking Magic 🌐</h3>
+                        <p>We started off as completely random teammates matched by the server. Who would have thought
+                            those first plane paths and tentative drop calls would lead to this?</p>
+                        <div class="nami-shoutout">
+                            <div class="nami-avatar">⚔️</div>
+                            <div class="nami-quote">
+                                <strong>Nami Saan (Anjali) Connection:</strong>
+                                <p>"If it wasn't for Nami Saan bringing us into the same lobby, we might still be
+                                    running with randoms. She was the bridge that turned a squad match into a lifetime
+                                    friendship!"</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 3: CHAOS MOMENTS -->
+        <section id="chaos-moments" class="snap-section">
+            <div class="section-card glass-panel fade-in">
+                <div class="card-header">
+                    <span class="section-tag">02 / BATTLE LOG</span>
+                    <h2 class="section-title"><span class="emoji">🔫</span> Chaos Moments</h2>
+                </div>
+                <p class="section-intro">Our gaming sessions are 10% strategy and 90% pure, unadulterated chaos. Here
+                    are our top combat files:</p>
+
+                <div class="chaos-grid">
+                    <div class="chaos-item card-hover" data-chaos="missed">
+                        <div class="chaos-icon">🎯</div>
+                        <h3>The Whiffed Snipes</h3>
+                        <p>Perfect angle, stationary target, AWM in hand... and the bullet goes into orbit. The silent
+                            pause after is legendary. 😂</p>
+                        <span class="stat-badge">Accuracy: 2%</span>
+                    </div>
+                    <div class="chaos-item card-hover" data-chaos="panic">
+                        <div class="chaos-icon">💉</div>
+                        <h3>Panic Revives</h3>
+                        <p>Crawling behind a 1-inch thick tree in the blue zone while a squad is rushing, screaming
+                            "REVIVE ME! THEY'RE ON ME!" on voice chat.</p>
+                        <span class="stat-badge">Heart Rate: 240 BPM</span>
+                    </div>
+                    <div class="chaos-item card-hover" data-chaos="rush">
+                        <div class="chaos-icon">🚗</div>
+                        <h3>Stupid Vehicle Rushes</h3>
+                        <p>Driving a Dacia straight into a fully occupied compound because "they look weak" only to get
+                            blown up in 2.5 seconds.</p>
+                        <span class="stat-badge">Survival Rate: 0%</span>
+                    </div>
+                </div>
+
+                <div class="interactive-meter">
+                    <span>Current Lobby Panic Index:</span>
+                    <div class="meter-bar">
+                        <div class="meter-fill" id="panic-meter-fill"></div>
+                    </div>
+                    <button class="action-btn" id="panic-btn">Induce Chaos! 🚨</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 4: CLUTCH QUEEN -->
+        <section id="clutch-queen" class="snap-section">
+            <div class="section-card glass-panel fade-in">
+                <div class="card-header">
+                    <span class="section-tag">🎮 03 / PLAYER PROFILES</span>
+                    <h2 class="section-title"><span class="emoji">🏆</span> Clutch Queen</h2>
+                </div>
+                <div class="profile-layout">
+                    <div class="stats-panel">
+                        <h3>Lobby Status: MVP 💙</h3>
+                        <div class="stat-row">
+                            <span class="stat-label">Aim & Reflexes</span>
+                            <div class="stat-bar">
+                                <div class="stat-fill" style="width: 80%;"></div>
+                            </div>
+                            <span class="stat-value">80% 🎯</span>
+                        </div>
+                        <div class="stat-row">
+                            <span class="stat-label">Patience with Us</span>
+                            <div class="stat-bar">
+                                <div class="stat-fill" style="width: 100%;"></div>
+                            </div>
+                            <span class="stat-value">INF% 😭</span>
+                        </div>
+                        <div class="stat-row">
+                            <span class="stat-label">Clutch Capability</span>
+                            <div class="stat-bar">
+                                <div class="stat-fill" style="width: 70%;"></div>
+                            </div>
+                            <span class="stat-value">70% 🔥</span>
+                        </div>
+                        <div class="stat-row">
+                            <span class="stat-label">Vibe & Fun</span>
+                            <div class="stat-bar">
+                                <div class="stat-fill" style="width: 100%;"></div>
+                            </div>
+                            <span class="stat-value">∞ 😂</span>
+                        </div>
+                    </div>
+                    <div class="appreciation-text">
+                        <h3>👑 Why You're Our MVP</h3>
+                        <p>Whether it's missing a few shots or pulling off a random clutch when we least expect it… you
+                            somehow make every match unforgettable.</p>
+                        <p>Half the time we lose because of chaos…<br>the other half we lose because of our
+                            stupidity…<br>but you still stay, laugh, and carry the vibe like nothing happened 😂</p>
+                        <p>You’re not just playing the game…<br>you’re the reason the game is fun in the first place.
+                        </p>
+                        <p>Even when we get wiped in 30 seconds,<br>you turn it into a full comedy show instead of a bad
+                            match 🎭</p>
+                        <p class="quote-text">"And honestly… that patience you have with us? That’s rarer than a Chicken
+                            Dinner 😭"</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 5: REAL TALK -->
+        <section id="real-talk" class="snap-section">
+            <div class="section-card glass-panel fade-in">
+                <div class="card-header">
+                    <span class="section-tag">04 / FRIENDSHIP LOG</span>
+                    <h2 class="section-title"><span class="emoji">❤️</span> Real Talk</h2>
+                </div>
+                <div class="real-talk-content">
+                    <div class="message-bubble bubble-chinny">
+                        <div class="bubble-meta">Chinny &amp; Nami Saan</div>
+                        <p>Beyond the drops, the chicken dinners, and the rank pushes, having you in our lives has been
+                            a blessing. You listen when things get heavy, celebrate when things go well, and match our
+                            energy like no one else can. You're a rockstar offline as much as you are in the game.</p>
+                    </div>
+                    <div class="message-bubble bubble-nami">
+                        <div class="bubble-meta">Nami Saan &amp; Chinny</div>
+                        <p>From the first day we connected, it was clear that you have this magnetic, warm energy. We
+                            are so incredibly happy that we got to become such close friends and share this squad
+                            journey. You bring so much joy into our squad, Joisha! Have the happiest birthday!</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 6: FINALE -->
+        <section id="finale" class="snap-section">
+            <div class="finale-content">
+                <div class="gift-box-wrapper">
+                    <div class="sparkles-container"></div>
+                    <h2 class="finale-title">Thanks for being our best friend, Joisha 💫</h2>
+                    <p class="finale-desc">You've reached the end of the combat file... or have you?</p>
+                </div>
+                <div class="button-wrapper">
+                    <button id="donot-click-btn" class="dont-click-btn">
+                        <span>Don't Click This 👀</span>
+                        <div class="btn-glow"></div>
+                    </button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- SECRET SCREEN (ACTIVATED VIA BUTTON) -->
+    <div id="secret-overlay" class="secret-overlay">
+        <div class="terminal-container">
+            <div class="terminal-header">
+                <div class="terminal-dots">
+                    <span class="dot red"></span>
+                    <span class="dot yellow"></span>
+                    <span class="dot green"></span>
+                </div>
+                <span class="terminal-title">override_friendship_protocol.sh</span>
+            </div>
+            <div class="terminal-body">
+                <div id="typing-container" class="typing-text"></div>
+                <div id="heart-container" class="heart-container hidden">
+                    <div class="pulse-heart">❤️</div>
+                    <div class="co-signed-message">
+                        <p class="final-sig">With all our love,</p>
+                        <p class="names">Chinny &amp; Nami Saan</p>
+                    </div>
+                    <button id="restart-btn" class="action-btn restart-btn">Replay Memories 🔄</button>
+                </div>
+            </div>
+        </div>
+        <div class="stars-layer"></div>
+    </div>
+
+    <!-- Background Music Audio Elements (Optional / Fallback) -->
+    <audio id="bg-audio" loop preload="auto">
+        <!-- We will generate sound via Web Audio API, but this is a hook for future custom audios if desired -->
+    </audio>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
